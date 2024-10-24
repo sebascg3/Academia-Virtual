@@ -6,7 +6,7 @@ private:
 public:
 	Estudiante();
 	Estudiante(string,string,string,string,string);
-	void setEspecialidad(const string& especialidad);
+	void setEspecialidad(const string);
 	string getEspecialidad() const;
 	string toString() const;
 };

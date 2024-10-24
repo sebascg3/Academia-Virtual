@@ -6,7 +6,7 @@ private:
 public:
 	Profesor();
 	Profesor(string, string, string, string, string);
-	void setGradoAcademico(const string& gradoAcademico);
+	void setGradoAcademico(const string gradoAcademico);
 	string getGradoAcademico() const;
 	string toString() const;
 };

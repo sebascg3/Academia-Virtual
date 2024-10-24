@@ -15,10 +15,10 @@ public:
 	Persona();
 	Persona(string, string, string, string);
 	virtual ~Persona();
-    void setNombre(const string& nombre);
-    void setId(const string& id);
-    void setNumeroTelefono(const string& numeroTelefono);
-    void setEmail(const string& email);
+    void setNombre(const string);
+    void setId(const string);
+    void setNumeroTelefono(const string);
+    void setEmail(const string);
 
 
     string getNombre() const;
