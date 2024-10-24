@@ -6,5 +6,8 @@ private:
 public:
 	Estudiante();
 	Estudiante(string,string,string,string,string);
+	void setEspecialidad(const string& especialidad);
+	string getEspecialidad() const;
+	string toString() const;
 };
 
