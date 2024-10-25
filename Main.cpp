@@ -6,8 +6,8 @@
 using namespace std;
 
 int main() {
-	Persona* estudiante = new Estudiante("Sebastian", "123950544", "8982-0101", "sebas@gmail.com", "Licenciado");
-	Curso cur;
-	cout << estudiante->toString();
+	Persona* profe = new Profesor("Sebastian", "123950544", "8982-0101", "sebas@gmail.com", "Licenciado");
+	Curso* curso = new Curso("Mate", "20214", 5, 20.000, "Disponible");
+	cout << curso->toString();
 	return 0;
 }

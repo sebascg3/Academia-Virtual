@@ -48,6 +48,6 @@ string Persona::getEmail() const {
 string Persona::toString() const {
     stringstream ss;
     ss << "Nombre: " << nombre << ", ID: " << id
-        << ", Teléfono: " << numeroTelefono << ", Email: " << email;
+        << ", Telefono: " << numeroTelefono << ", Email: " << email;
     return ss.str();
 }

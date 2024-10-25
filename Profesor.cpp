@@ -19,6 +19,6 @@ string Profesor::getGradoAcademico() const {
 
 string Profesor::toString() const {
     stringstream ss;
-    ss << Persona::toString() << ", Grado Académico: " << gradoAcademico;
+    ss << Persona::toString() << ", Grado Academico: " << gradoAcademico;
     return ss.str();
 }
