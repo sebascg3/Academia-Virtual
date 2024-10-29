@@ -1,13 +1,23 @@
 #include <iostream>
-#include "Curso.h"
-#include "Estudiante.h"
+#include "Grupo.h"
+#include "Horario.h"
 #include "Profesor.h"
 
-using namespace std;
-
 int main() {
-	Persona* profe = new Profesor("Sebastian", "123950544", "8982-0101", "sebas@gmail.com", "Licenciado");
-	Curso* curso = new Curso("Mate", "20214", 5, 20.000, "Disponible");
-	cout << curso->toString();
-	return 0;
+    // Crear un horario
+    Horario horario("Lunes", 10, 0, 12, 0);  // Lunes de 10:00 a 12:00
+
+    // Crear un profesor (se asume que Profesor tiene un constructor que recibe nombre)
+    Profesor profesor("Dr. Juan Perez", "1234456", "89820101", "sebas@gmail.com", "Licenciado");
+
+    // Crear un grupo
+    Grupo grupo(101, 30, 25, horario, &profesor);
+
+    // Mostrar información del grupo
+    cout << grupo.mostrarInformacion() << endl;
+
+    // Verificar si el grupo está lleno
+    grupo.estaLleno();
+
+    return 0;
 }
