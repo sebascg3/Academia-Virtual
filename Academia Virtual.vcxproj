@@ -127,10 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\..\..\Downloads\ListaEstudiante.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\..\..\Downloads\ListaProfesor.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\..\..\Downloads\NodoEstudiante.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\..\..\Downloads\NodoProfesor.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Estudiante.h" />
     <ClInclude Include="Grupo.h" />
@@ -143,8 +139,6 @@
     <ClInclude Include="Profesor.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\Downloads\NodoEstudiante.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\Downloads\NodoProfesor.cpp" />
     <ClCompile Include="Curso.cpp" />
     <ClCompile Include="Estudiante.cpp" />
     <ClCompile Include="Grupo.cpp" />
