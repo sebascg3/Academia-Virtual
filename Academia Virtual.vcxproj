@@ -133,8 +133,8 @@
     <ClInclude Include="Horario.h" />
     <ClInclude Include="ListaCurso.h" />
     <ClInclude Include="ListaGrupo.h" />
-    <ClInclude Include="NodoCurso.h" />
-    <ClInclude Include="NodoGrupo.h" />
+    <ClInclude Include="ListaPeriodo.h" />
+    <ClInclude Include="Periodo.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Profesor.h" />
   </ItemGroup>
@@ -145,9 +145,9 @@
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="ListaCurso.cpp" />
     <ClCompile Include="ListaGrupo.cpp" />
+    <ClCompile Include="ListaPeriodo.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="NodoCurso.cpp" />
-    <ClCompile Include="NodoGrupo.cpp" />
+    <ClCompile Include="Periodo.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Profesor.cpp" />
   </ItemGroup>

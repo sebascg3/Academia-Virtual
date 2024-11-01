@@ -1,25 +1,27 @@
 #include "ListaCurso.h"
 
+ListaCurso::Nodo::Nodo(const Curso& curso) : curso(curso), siguiente(nullptr) {}
+
 ListaCurso::ListaCurso() : cabeza(nullptr) {}
 
 ListaCurso::~ListaCurso() {
-    NodoCurso* actual = cabeza;
+    Nodo* actual = cabeza;
     while (actual != nullptr) {
-        NodoCurso* temp = actual;
+        Nodo* temp = actual;
         actual = actual->siguiente;
         delete temp;
     }
 }
 
 void ListaCurso::agregarCurso(const Curso& curso) {
-    NodoCurso* nuevoNodo = new NodoCurso(curso);
+    Nodo* nuevoNodo = new Nodo(curso);
     nuevoNodo->siguiente = cabeza;
     cabeza = nuevoNodo;
 }
 
-bool ListaCurso::eliminarCurso(const string& id) {
-    NodoCurso* actual = cabeza;
-    NodoCurso* anterior = nullptr;
+bool ListaCurso::eliminarCurso(const std::string& id) {
+    Nodo* actual = cabeza;
+    Nodo* anterior = nullptr;
 
     while (actual != nullptr && actual->curso.getId() != id) {
         anterior = actual;
@@ -27,7 +29,7 @@ bool ListaCurso::eliminarCurso(const string& id) {
     }
 
     if (actual == nullptr) {
-        return false;
+        return false;  
     }
 
     if (anterior == nullptr) {
@@ -42,13 +44,12 @@ bool ListaCurso::eliminarCurso(const string& id) {
 }
 
 void ListaCurso::mostrarCursos() const {
-    NodoCurso* actual = cabeza;
+    Nodo* actual = cabeza;
     while (actual != nullptr) {
-        cout << actual->curso.toString() << endl;
+        cout << actual->curso.toString() << endl; 
         actual = actual->siguiente;
     }
 }
-
 
 bool ListaCurso::estaVacia() const {
     return cabeza == nullptr;

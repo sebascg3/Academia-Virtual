@@ -1,18 +1,26 @@
 #pragma once
-#include "NodoCurso.h"
+#include "Curso.h"
 #include <iostream>
+#include <string>
 
 class ListaCurso {
 private:
-    NodoCurso* cabeza;
+    class Nodo {
+    public:
+        Curso curso;
+        Nodo* siguiente;
+
+        Nodo(const Curso& curso);  // Constructor
+    };
+
+    Nodo* cabeza;
 
 public:
-    ListaCurso();
-
-    ~ListaCurso();
+    ListaCurso();                  // Constructor
+    ~ListaCurso();                 // Destructor
 
     void agregarCurso(const Curso& curso);
-    bool eliminarCurso(const string& id);
+    bool eliminarCurso(const std::string& id);
     void mostrarCursos() const;
     bool estaVacia() const;
 };

@@ -1,15 +1,22 @@
 #pragma once
-#include "NodoGrupo.h"
+#include "Grupo.h"
 #include <iostream>
 
 class ListaGrupo {
 private:
-    NodoGrupo* cabeza;
+    class Nodo {
+    public:
+        Grupo grupo;
+        Nodo* siguiente;
+
+        Nodo(const Grupo& grupo);  // Constructor
+    };
+
+    Nodo* cabeza;
 
 public:
-    ListaGrupo();
-
-    ~ListaGrupo();
+    ListaGrupo();                  // Constructor
+    ~ListaGrupo();                 // Destructor
 
     void agregarGrupo(const Grupo& grupo);
     bool eliminarGrupo(int numeroGrupo);
