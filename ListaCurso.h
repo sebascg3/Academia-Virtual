@@ -23,5 +23,6 @@ public:
     Curso* buscarCurso(const string& id);
     bool eliminarCurso(const string& id);
     void mostrarCursos() const;
+    void mostrarGrupos() const;
     bool estaVacia() const;
 };

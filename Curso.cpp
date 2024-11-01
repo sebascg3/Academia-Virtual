@@ -1,13 +1,25 @@
 #include "Curso.h"
-
-
 Curso::Curso() : nombre(""), id(""), horas(0), precio(0.0), estado("Inactivo") {}
-
 
 Curso::Curso(string nombre, string id, int horas, double precio, string estado)
     : nombre(nombre), id(id), horas(horas), precio(precio), estado(estado) {}
 
 
+
+
+void Curso::agregarGrupo(const Grupo& grupo) {
+    grupos.agregarGrupo(grupo); 
+}
+
+void Curso::mostrarGrupos() const {
+    if (grupos.estaVacia()) {
+        cout << "No hay grupos disponibles para este curso." << endl;
+    }
+    else {
+        cout << "Grupos del curso " << nombre << ":" << endl;
+        grupos.mostrarGrupos(); 
+    }
+}
 string Curso::getNombre() const {
     return nombre;
 }
@@ -48,7 +60,6 @@ void Curso::setPrecio(double _precio) {
 void Curso::setEstado(const string _estado) {
     estado = _estado;
 }
-
 
 string Curso::toString() const {
     stringstream ss;

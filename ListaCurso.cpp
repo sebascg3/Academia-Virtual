@@ -61,6 +61,21 @@ void ListaCurso::mostrarCursos() const {
     }
 }
 
+void ListaCurso::mostrarGrupos() const {
+    if (estaVacia()) {
+        std::cout << "No hay cursos disponibles." << std::endl;
+        return;
+    }
+
+    Nodo* actual = cabeza;
+    std::cout << "Grupos de los cursos:" << std::endl;
+    while (actual != nullptr) {
+        cout << "Curso: " << actual->curso.toString() << endl; 
+        actual->curso.mostrarGrupos();
+        actual = actual->siguiente;
+    }
+}
+
 bool ListaCurso::estaVacia() const {
     return cabeza == nullptr;
 }
