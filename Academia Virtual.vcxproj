@@ -144,6 +144,7 @@
     <ClCompile Include="Estudiante.cpp" />
     <ClCompile Include="Grupo.cpp" />
     <ClCompile Include="Horario.cpp" />
+    <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="ListaCurso.cpp" />
     <ClCompile Include="ListaGrupo.cpp" />
     <ClCompile Include="ListaPeriodo.cpp" />
