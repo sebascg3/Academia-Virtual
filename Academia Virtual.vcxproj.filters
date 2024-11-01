@@ -45,7 +45,11 @@
     <ClInclude Include="ListaPeriodo.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Interfaz.h">
+=======
+    <ClInclude Include="EurekaAISchool.h">
+>>>>>>> Clase Eureka AI School creada
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -81,6 +85,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="ListaPeriodo.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="EurekaAISchool.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
