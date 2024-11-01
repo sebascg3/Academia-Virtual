@@ -12,6 +12,7 @@ public:
     ~ListaEstudiante();
 
     void agregarEstudiante(const Estudiante& curso);
+    Estudiante* buscarEstudiante(const string& id);
     bool eliminarEstudiante(const string& id);
     void mostrarEstudiantes() const;
     bool estaVacia() const;

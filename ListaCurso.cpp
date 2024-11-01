@@ -19,7 +19,17 @@ void ListaCurso::agregarCurso(const Curso& curso) {
     cabeza = nuevoNodo;
 }
 
-bool ListaCurso::eliminarCurso(const std::string& id) {
+Curso* ListaCurso::buscarCurso(const string& id) {
+    Nodo* actual = cabeza;
+    while (actual) {
+        if (actual->curso.getId() == id) {
+            return &actual->curso;
+        }
+        actual = actual->siguiente;
+    }
+    return nullptr;
+}
+bool ListaCurso::eliminarCurso(const string& id) {
     Nodo* actual = cabeza;
     Nodo* anterior = nullptr;
 

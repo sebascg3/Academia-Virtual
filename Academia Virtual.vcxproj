@@ -134,8 +134,10 @@
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Interfaz.h" />
     <ClInclude Include="ListaCurso.h" />
+    <ClInclude Include="ListaEstudiante.h" />
     <ClInclude Include="ListaGrupo.h" />
     <ClInclude Include="ListaPeriodo.h" />
+    <ClInclude Include="ListaProfesor.h" />
     <ClInclude Include="Periodo.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Profesor.h" />

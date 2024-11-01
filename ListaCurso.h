@@ -20,7 +20,8 @@ public:
     ~ListaCurso();                 // Destructor
 
     void agregarCurso(const Curso& curso);
-    bool eliminarCurso(const std::string& id);
+    Curso* buscarCurso(const string& id);
+    bool eliminarCurso(const string& id);
     void mostrarCursos() const;
     bool estaVacia() const;
 };

@@ -21,6 +21,16 @@ void ListaPeriodo::agregarPeriodo(const Periodo& periodo) {
     cabeza = nuevoNodo;
 }
 
+Periodo* ListaPeriodo::buscarPeriodo(int numeroPeriodo) {
+    Nodo* actual = cabeza;
+    while (actual) {
+        if (actual->periodo.getNumeroPeriodo() == numeroPeriodo) {
+            return &actual->periodo;
+        }
+        actual = actual->siguiente;
+    }
+    return nullptr;
+}
 
 bool ListaPeriodo::eliminarPeriodo(int numeroPeriodo) {
     Nodo* actual = cabeza;
@@ -47,23 +57,14 @@ bool ListaPeriodo::eliminarPeriodo(int numeroPeriodo) {
 }
 
 
-Periodo* ListaPeriodo::buscarPeriodo(int numeroPeriodo) {
-    Nodo* actual = cabeza;
-    while (actual != nullptr) {
-        if (actual->periodo.getNumeroPeriodo() == numeroPeriodo) {
-            return &actual->periodo;
-        }
-        actual = actual->siguiente;
-    }
-    return nullptr;
-}
+
 
 
 void ListaPeriodo::mostrarPeriodos() const {
     Nodo* actual = cabeza;
     while (actual != nullptr) {
-        std::cout << "Periodo " << actual->periodo.getNumeroPeriodo() << ": "
-            << actual->periodo.getMesInicio() << " - " << actual->periodo.getMesFin() << std::endl;
+        cout << "Periodo " << actual->periodo.getNumeroPeriodo() << ": "
+            << actual->periodo.getMesInicio() << " - " << actual->periodo.getMesFin() << endl;
         actual = actual->siguiente;
     }
 }

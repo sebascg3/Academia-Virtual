@@ -19,6 +19,17 @@ void ListaGrupo::agregarGrupo(const Grupo& grupo) {
     cabeza = nuevoNodo;
 }
 
+Grupo* ListaGrupo::buscarGrupo(int numeroGrupo) {
+    Nodo* actual = cabeza;
+    while (actual) {
+        if (actual->grupo.getNumeroGrupo() == numeroGrupo) {
+            return &actual->grupo;
+        }
+        actual = actual->siguiente;
+    }
+    return nullptr;
+}
+
 bool ListaGrupo::eliminarGrupo(int numeroGrupo) {
     Nodo* actual = cabeza;
     Nodo* anterior = nullptr;
@@ -46,7 +57,7 @@ bool ListaGrupo::eliminarGrupo(int numeroGrupo) {
 void ListaGrupo::mostrarGrupos() const {
     Nodo* actual = cabeza;
     while (actual != nullptr) {
-        std::cout << actual->grupo.mostrarInformacion() << std::endl;  
+        cout << actual->grupo.mostrarInformacion() << endl;  
         actual = actual->siguiente;
     }
 }

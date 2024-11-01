@@ -12,7 +12,8 @@ public:
     ~ListaProfesor();
 
     void agregarProfesor(const Profesor& curso);
+    Profesor* buscarProfesor(const string& id);
     bool eliminarProfesor(const string& id);
     void mostrarProfesores() const;
-    bool estaVacia() const;
+
 };
